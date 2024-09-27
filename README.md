@@ -1,4 +1,4 @@
-Android AdMob Library
+Android AdMob Custom Library for both Jetpack Compose and XML
 
 Description
 
