@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/shimmerIncluded"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingVertical="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+        <!--Shimmer Effect-->
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#85F206">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:background="#403D3D"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Advertisement is loading"
+                    android:textColor="@color/white"
+                    android:textSize="20dp">
+
+                </TextView>
+            </RelativeLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            ads:layout_constraintBottom_toBottomOf="parent"
+            ads:adSize="MEDIUM_RECTANGLE"
+            ads:adUnitId="ca-app-pub-3940256099942544/6300978111" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

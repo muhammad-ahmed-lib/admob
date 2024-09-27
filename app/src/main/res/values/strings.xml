@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">admob</string>
+    <string name="title_activity_native_ads">NativeAdsActivity</string>
+</resources>
